@@ -1,5 +1,6 @@
 import unittest
 import calculadora
+import xmlrunner
 
 class TestCalculadora(unittest.TestCase):
     def teste_adiciona_int(self):
@@ -19,4 +20,5 @@ class TestCalculadora(unittest.TestCase):
         self.assertEqual(res,'bruno monteiro')
 
 if __name__ == "__main__":
-    unittest.main()
+    #unittest.main()
+    unittest.main(testRunner = xmlrunner.XMLTestRunner(output='relatorio-testes'))
